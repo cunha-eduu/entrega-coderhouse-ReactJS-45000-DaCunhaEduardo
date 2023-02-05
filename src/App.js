@@ -9,12 +9,12 @@ import CartWidget from './components/CartWidget/CartWidget'
 
 function App() {
   return (
-        <body className='app'>
+        <div className='app'>
             <NavBar cartwidgedt={CartWidget}/>
             <Banner />
-            <ItemListContainer/>
-            <Footer />
-        </body>
+            <ItemListContainer greeting={'Bienvenido(a) a MedShop! El portal de Equipos Médicos más grande de La Argentina'}/>
+            <Footer /> 
+        </div>
   );
 }
 

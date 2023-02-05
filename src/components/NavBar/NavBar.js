@@ -1,5 +1,5 @@
 import './NavBar.css';
-import { BsCart } from 'react-icons/bs';
+import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
         return (
@@ -22,8 +22,8 @@ const NavBar = () => {
                                     <a href='./Nosotros'>Nosotros</a>
                                 </li>                        
                                 <li className='header__nav__ul__li'>
-                                    <a href='./CartWidget'>{<BsCart/>}</a>
-                                </li>                        
+                                    <a href='./CartWidget'>{<CartWidget />}</a>
+                                </li>                                                       
                         </div>
                     </div>
                 </nav>  
