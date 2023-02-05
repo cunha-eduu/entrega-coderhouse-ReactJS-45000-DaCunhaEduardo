@@ -1,0 +1,33 @@
+.banner {
+    width: var(--FULL-WIDTH);
+    height: var(--FULL-HEGHT);
+    padding: 0;
+    margin: 0;
+}
+
+.banner__h1, .banner__h2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    font-size: 10rem;
+    color: var(--FONT-COLOR-HEADER);
+    height: auto;
+    padding: var(--PADDING-HEADER);
+
+}
+
+.banner__h2 {
+    font-size: 1rem;
+
+}
+
+.titulo{
+    display:block;
+}
+
+.banner img {
+    display: block;
+    width: var(--FULL-WIDTH);
+    height: auto;
+    margin: var(--MARGIN-MAIN-BOXES);
+}

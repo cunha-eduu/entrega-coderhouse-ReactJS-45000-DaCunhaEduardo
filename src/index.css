@@ -1,13 +1,105 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/*FONT*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* RESET  */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+    font-family: "Poppins", sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* VARIABLES*/
+:root {
+  /* COLORS */
+  --BG-COLOR: #C4FFF9 ;
+  --BG-COLOR-HEADER: #07BEB8;
+  --BG-COLOR-BODY: #C4FFF9;
+  --BG-COLOR-MAIN: #C4FFF9;
+  --BORDER-COLOR-IMG:#9CEAEF;
+  --FONT-COLOR: #68D8D6;
+  --FONT-COLOR-HEADER: #C4FFF9;
+  --LINK-COLOR: #C4FFF9;
+  --LINK-COLOR-HOVER: #C4FFF9;
+  --LINK-MAIN-COLOR: #68D8D6;
+  /* DIMENTIONS */
+  --PADDING-HEADER:20px;
+  --PADDING-MAIN:20px;
+  --PADDING-MAIN-ELEMENTS: 0.5rem;
+  --PADDING-MAIN-IMG: 0 auto;
+  --PADDING-FIGCAPTION: 0.5rem;
+  --MARGIN-MAIN-BOXES: auto auto;
+  --POSITION-HEADER: static;
+  --FONT-SIZE: 1.3rem;
+  --BORDER-RADIUS-IMG: 1rem;
+  --FULL-WIDTH: 100vw;
+  --FULL-HEIGHT: 100vh;
+}
+
+/* BODY */
+body {
+  background-color: var(--BG-COLOR-BODY);
+  width: var(--FULL-WIDTH);
+  margin: var(--MARGIN-MAIN-BOXES);
+}
+
+/* LINKS */
+a:-webkit-any-link {
+  color: var(--LINK-COLOR);
+}
+a:-moz-any-link {
+  color: var(--LINK-COLOR);
+}
+a:any-link {
+  color: var(--LINK-COLOR);
+}
+
+a:hover, a:focus-visible {
+  color: var(--LINK-COLOR-HOVER);
+}
+
+a:active {
+  color: var(--LINK-COLOR);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: var(--FULL-HEIGHT);
+  width: var(--FULL-WIDTH);
 }

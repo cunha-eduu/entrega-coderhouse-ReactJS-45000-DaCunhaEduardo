@@ -1,0 +1,9 @@
+/* FOOTER */
+.footer {
+    background-color: var(--BG-COLOR-HEADER);
+    color: var(--FONT-COLOR-HEADER);
+    padding: var(--PADDING-HEADER);
+    position: var(--POSITION-HEADER);
+    text-align: center;
+    place-content: center;
+}
