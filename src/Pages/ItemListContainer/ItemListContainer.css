@@ -1,7 +1,7 @@
-.itemListContainer {
+.itemListContainer, .itemListContainerCard {
     background-color: var(--BG-COLOR-MAIN);
     color: var(--FONT-COLOR);
-  /*   padding: var(--PADDING-MAIN); */
+    padding: var(--PADDING-MAIN);
     margin: var(--MARGIN-MAIN-BOXES);
     font-size: 2rem;
     text-align: center;
