@@ -1,13 +1,30 @@
 .item{
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.95);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    background-color: whitesmoke;
+    border-radius: var(--BORDER-RADIUS-IMG);
+    padding: var(--PADDING-MAIN);
+    margin: var(--PADDING-MAIN);
+    background-color: white;
     color: var(--FONT-COLOR-DARK);
 }
+
 .item__img {
-    width: 300px;
-    height: 350px;
-    border-radius: 5px;
+    width: 250px;
+    height: 300px;
+    border-radius: var(--BORDER-RADIUS-IMG);
+    padding: var(--PADDING-MAIN-IMG);
+}
+
+.item:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.868);
+    border-radius: var(--BORDER-RADIUS-IMG);
+    padding: 2rem;
+}
+
+
+.item__name, .item__price{
+    max-width: 350px;
+    min-width: auto;
+    margin: var(--MARGIN-MAIN-BOXES);
+    text-align: center;
+    font-size: 1.5rem;
 }

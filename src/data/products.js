@@ -5,10 +5,10 @@ export const products = [{
     name: 'Estetoscopios',
     description: 'XXXX',
     quality: 'XXX',
-    price: '200 USD',
+    price: '130 USD',
     stock: 100,
     category: 'estetoscopios',
-    image: '/img/estetoscopio.jpg'
+    image: '/img/estetoscopio.png'
 },
 {
     id: 2,
@@ -18,7 +18,7 @@ export const products = [{
     price: '50 USD',
     stock: 75,
     category: 'ambos',
-    image: '/img/amboMujer.jpg'
+    image: '/img/amboMujer.png'
 },
 {
     id: 3,
@@ -38,7 +38,7 @@ export const products = [{
     price: '15 USD',
     stock: 25,
     category: 'saturometros',
-    image: '/img/saturometro.jpg'
+    image: '/img/saturometro.png'
 },
 
 ]
