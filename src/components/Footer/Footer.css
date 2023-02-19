@@ -6,4 +6,5 @@
     position: var(--POSITION-HEADER);
     text-align: center;
     place-content: center;
+    width: var(--FULL-WIDTH);
 }

@@ -23,7 +23,6 @@
 
 .item__name, .item__price{
     max-width: 350px;
-    min-width: auto;
     margin: var(--MARGIN-MAIN-BOXES);
     text-align: center;
     font-size: 1.5rem;

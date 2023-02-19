@@ -6,10 +6,9 @@ const NavBar = () => {
         return (
             <header className='header'>
                 <nav>
-                    <div>
-                        <div>
-                            <ul>
-                            </ul>
+                    <div className='header__logo__cointainer'>
+                            <ul className='header__nav__ul'>
+                            <img className='header__logo' src="/logo.png" alt="LOGO" />
                                 <li className='header__nav__ul__li'>
                                     <NavLink to='/'>Home</NavLink>
                                 </li>
@@ -17,18 +16,18 @@ const NavBar = () => {
                                     <NavLink to='/category/estetoscopios'>Estetoscopios</NavLink>
                                 </li>
                                 <li className='header__nav__ul__li'>
-                                    <NavLink to='/category/ambos'>Ambos</NavLink>
+                                    <NavLink to='/category/tensiometros'>Tensiómetro</NavLink>
                                 </li>
                                 <li className='header__nav__ul__li'>
-                                    <NavLink to='/category/guardapolvos'>Guardapolvos</NavLink>
+                                    <NavLink to='/category/indumentaria'>Indumentaria</NavLink>
                                 </li>                        
                                 <li className='header__nav__ul__li'>
                                     <NavLink to='/category/saturometros'>Saturometro</NavLink>
                                 </li>                        
                                 <li className='header__nav__ul__li'>
                                     <NavLink to='./CartWidget'>{<CartWidget />}</NavLink>
-                                </li>                                                       
-                        </div>
+                                </li>
+                            </ul>                                                       
                     </div>
                 </nav>  
             </header>

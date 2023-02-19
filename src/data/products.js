@@ -12,12 +12,12 @@ export const products = [{
 },
 {
     id: 2,
-    name: 'Amobos',
+    name: 'Ambos Mujer',
     description: 'XXX',
     quality: 'XXX',
     price: '50 USD',
     stock: 75,
-    category: 'ambos',
+    category: 'indumentaria',
     image: '/img/amboMujer.png'
 },
 {
@@ -27,7 +27,7 @@ export const products = [{
     quality: 'XXX',
     price: '30 USD',
     stock: 35,
-    category: 'guardapolvos',
+    category: 'indumentaria',
     image: '/img/GuardapolvoHombre.png'
 },
 {
@@ -39,6 +39,26 @@ export const products = [{
     stock: 25,
     category: 'saturometros',
     image: '/img/saturometro.png'
+},
+{
+    id: 5,
+    name: 'Tensiómetro Digital',
+    description: 'XXXX',
+    quality: 'XXX',
+    price: '45 USD',
+    stock: 25,
+    category: 'tensiometros',
+    image: '/img/tensiometroDigital.jpg'
+},
+{
+    id: 6,
+    name: 'Tensiómetro Manual',
+    description: 'XXXX',
+    quality: 'XXX',
+    price: '20 USD',
+    stock: 25,
+    category: 'tensiometros',
+    image: '/img/tensiometroManual.jpg'
 },
 
 ]

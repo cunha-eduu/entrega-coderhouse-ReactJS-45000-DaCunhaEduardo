@@ -1,0 +1,22 @@
+.itemCount__counter, .itemCount__controllers{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.itemCount__controllers{
+    padding: var(--PADDING-MAIN-ELEMENTS);
+    margin: var(--PADDING-MAIN-ELEMENTS);
+    
+}
+
+.itemCount__controllers__button{
+    color: white;
+    font-size: 2rem;
+    background-color: darkcyan;
+    border: none;
+    padding: 70% auto;
+    margin: 10px;
+    justify-content: space-around;
+    width: 35px;
+    height: 35px;
+}

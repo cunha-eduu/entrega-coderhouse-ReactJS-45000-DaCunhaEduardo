@@ -1,3 +1,5 @@
+import './ItemDetailContainer.css';
+
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/products";
@@ -21,6 +23,8 @@ const ItemDetailContainer = () => {
             .catch((error) => {console.log(error)})
     }, [])
 
-    return <div> <ItemDetail detail={detailObject}/> </div>;
+    return <div className='itemDetailContainer'> 
+                <ItemDetail detail={detailObject}/> 
+            </div>;
 };
 export default ItemDetailContainer;

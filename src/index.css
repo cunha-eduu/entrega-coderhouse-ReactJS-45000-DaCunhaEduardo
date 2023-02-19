@@ -88,6 +88,7 @@ a:-moz-any-link {
 }
 a:any-link {
   color: var(--LINK-COLOR);
+  text-decoration: none;
 }
 
 a:hover, a:focus-visible {
