@@ -1,0 +1,5 @@
+.cart__img {
+    width: 400px;
+    height: 400px;
+    padding: var(--PADDING-MAIN);
+}

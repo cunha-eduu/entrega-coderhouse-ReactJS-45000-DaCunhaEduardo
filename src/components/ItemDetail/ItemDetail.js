@@ -1,8 +1,10 @@
 import './ItemDetail.css'
 import { useState } from "react";
 import ItemCount from '../ItemCount/ItemCount';
+import { useNavigate } from 'react-router-dom';
 
 const ItemDetail = ({detail}) => {
+    const navigate = useNavigate()
     const [count, setCount] = useState(0)
     const agregarAlCarrito = (event) => {
         event.preventDefault()
@@ -19,7 +21,12 @@ const ItemDetail = ({detail}) => {
 
         <ItemCount count={count} setCount={setCount}/>
         
-        <button className="itemDetail___button"  onClick={agregarAlCarrito}>Agregar al carrito</button>
+        <button className="itemDetail__button"  onClick={agregarAlCarrito}>Agregar al carrito</button>
+        <div className="itemDetail__secondary__button">
+            <button className="itemDetail__secondary__button1"  onClick={() => navigate('/')}>Seguir comprando</button>
+            <button className="itemDetail__secondary__button2"  onClick={() => navigate('/cart')}>Finalizar Compra</button>
+        </div>
+        
     </div>
     );
     };

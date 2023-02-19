@@ -9,7 +9,7 @@
 
 .item__img {
     width: 250px;
-    height: 300px;
+    height: 250px;
     border-radius: var(--BORDER-RADIUS-IMG);
     padding: var(--PADDING-MAIN-IMG);
 }

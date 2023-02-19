@@ -25,7 +25,7 @@ const NavBar = () => {
                                     <NavLink to='/category/saturometros'>Saturometro</NavLink>
                                 </li>                        
                                 <li className='header__nav__ul__li'>
-                                    <NavLink to='./CartWidget'>{<CartWidget />}</NavLink>
+                                    <NavLink to='/cart'>{<CartWidget />}</NavLink>
                                 </li>
                             </ul>                                                       
                     </div>
