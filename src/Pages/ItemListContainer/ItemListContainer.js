@@ -14,12 +14,12 @@ const ItemListContainer = ({greeting, descuento}) => {
             const filteredProducts = products.filter((item) => item.category === categoryId)
             setTimeout(() => {
                 resolve(filteredProducts)
-            }, 1000)
+            }, 100)
 
         } else {
             setTimeout(() => {
                 resolve(products)
-            }, 1000)
+            }, 100)
         }
         
     })

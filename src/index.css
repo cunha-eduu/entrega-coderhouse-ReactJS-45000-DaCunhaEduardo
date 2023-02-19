@@ -77,6 +77,8 @@ body {
   background-color: var(--BG-COLOR-BODY);
   width: var(--FULL-WIDTH);
   height: var(--FULL-HEIGHT);
+  overflow-x: hidden;
+
 }
 
 /* LINKS */
@@ -102,6 +104,4 @@ a:active {
 .app {
   display: flex;
   flex-direction: column;
-  height: var(--FULL-HEIGHT);
-  width: var(--FULL-WIDTH);
 }

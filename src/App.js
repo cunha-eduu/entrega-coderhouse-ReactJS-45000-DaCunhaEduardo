@@ -9,7 +9,7 @@ import Cart from './Pages/Cart/Cart'
 
 function App() {
   return (
-        <div className='app'>
+        <main className='app'>
           <BrowserRouter>
             <NavBar cartwidgedt={CartWidget}/>
             <Banner />
@@ -21,7 +21,7 @@ function App() {
             </Routes>
             <Footer />
           </BrowserRouter> 
-        </div>
+        </main>
   );
 }
 

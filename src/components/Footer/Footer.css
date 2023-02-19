@@ -8,4 +8,5 @@
     text-align: center;
     place-content: center;
     display: inline;
+    font-size: var(--FONT-SIZE);
 }
