@@ -76,7 +76,7 @@ table {
 body {
   background-color: var(--BG-COLOR-BODY);
   width: var(--FULL-WIDTH);
-  margin: var(--MARGIN-MAIN-BOXES);
+  height: var(--FULL-HEIGHT);
 }
 
 /* LINKS */

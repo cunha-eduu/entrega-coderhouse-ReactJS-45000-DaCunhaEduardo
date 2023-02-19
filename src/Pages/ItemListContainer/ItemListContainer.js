@@ -35,11 +35,12 @@ const ItemListContainer = ({greeting, descuento}) => {
 
     return(
         <div className='itemListContainer'>
-            <h2>{greeting}</h2>
+            <h2 className='itemListContainer__geeting'>{greeting}</h2>
+            <h3 className='itemListContainer__descuento' >{descuento}</h3>
             <div>
                 <ItemList productList={productList} />
             </div>
-            <p>{descuento}</p>
+            
         </div>
     )
 };

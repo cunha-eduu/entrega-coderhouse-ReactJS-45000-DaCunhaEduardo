@@ -13,6 +13,7 @@
     color: var(--FONT-COLOR-HEADER);
     height: auto;
     padding: var(--PADDING-HEADER);
+    
 
 }
 
@@ -25,5 +26,4 @@
     display: block;
     width: var(--FULL-WIDTH);
     height: auto;
-    margin: var(--MARGIN-MAIN-BOXES);
 }

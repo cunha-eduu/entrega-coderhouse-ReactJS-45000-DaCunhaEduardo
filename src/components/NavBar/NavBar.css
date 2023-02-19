@@ -2,9 +2,9 @@
     background-color: var(--BG-COLOR-HEADER);
     color: var(--FONT-COLOR-HEADER);
     padding: var(--PADDING-HEADER);
+    margin: 0;
     position: var(--POSITION-HEADER);
     display: inline;
-
 }
 .header__nav__ul{
     align-items: center;

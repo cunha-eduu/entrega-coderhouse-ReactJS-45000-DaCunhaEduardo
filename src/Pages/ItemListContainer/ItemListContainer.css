@@ -6,3 +6,14 @@
     font-size: 2rem;
     text-align: center;
 }  
+
+.itemListContainer__geeting{
+    padding: var(--PADDING-MAIN);
+    margin: var(--MARGIN-MAIN-BOXES);
+}
+
+.itemListContainer__descuento{
+    color: rgb(221, 5, 5);
+    font-weight: bold;
+    background-color: white;
+}
