@@ -1,15 +1,13 @@
 import './ItemDetail.css'
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ItemCount from '../ItemCount/ItemCount';
 import { useNavigate } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext';
 
 const ItemDetail = ({detail}) => {
     const navigate = useNavigate()
+    const {addItem} = useContext(CartContext)
     const [count, setCount] = useState(0)
-    const agregarAlCarrito = (event) => {
-        event.preventDefault()
-        console.log({...detail, quantity: count})
-    }
     
     return(
     <div className="item__detail">
@@ -21,7 +19,7 @@ const ItemDetail = ({detail}) => {
 
         <ItemCount count={count} setCount={setCount}/>
         
-        <button className="itemDetail__button"  onClick={agregarAlCarrito}>Agregar al carrito</button>
+        <button className="itemDetail__button"  onClick={() => addItem(detail, count)}>Agregar al carrito</button>
         <div className="itemDetail__secondary__button">
             <button className="itemDetail__secondary__button1"  onClick={() => navigate('/')}>Seguir comprando</button>
             <button className="itemDetail__secondary__button2"  onClick={() => navigate('/cart')}>Finalizar Compra</button>
