@@ -12,7 +12,7 @@ export const products = [{
 },
 {
     id: 2,
-    name: 'Ambos Mujer',
+    name: 'Ambos',
     description: 'Diferentes colores y tamaños, 100% algodón',
     quality: 'Premium',
     price: '50 USD',

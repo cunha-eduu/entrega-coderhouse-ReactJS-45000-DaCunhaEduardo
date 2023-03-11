@@ -12,10 +12,10 @@ const ItemDetail = ({detail}) => {
     return(
     <div className="item__detail">
         <h2 className='item__detail__name' >{detail.name}</h2>
-        <img className='item__detail__img' alt={detail.name} src={detail.image}/>
+        <img className='item__detail__img' alt={detail.name} src={`/img/${detail.image}`}/>
         
         <h3 className='item__detail__description'>{detail.description}</h3>
-        <h3 className='item__detail__price'>{detail.price}</h3>
+        <h3 className='item__detail__price'>USD {detail.price}</h3>
 
         <ItemCount count={count} setCount={setCount}/>
         

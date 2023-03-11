@@ -1,36 +1,50 @@
 import './ItemListContainer.css'
-import {products} from '../../data/products'
 import {useEffect, useState } from 'react';
 import  ItemList from '../../components/ItemList/ItemList'
 import { useParams } from 'react-router-dom';
+import {getFirestore, getDocs, collection, query, where} from 'firebase/firestore'
 
 const ItemListContainer = ({greeting, descuento}) => {
     const [productList, setProductList] = useState([])
-    const [inputValue, setInputValue] = useState([])
     const { categoryId } = useParams()
-    console.log(categoryId)
-    const getProducts = new Promise((resolve, reject) => {
-        if(categoryId) {
-            const filteredProducts = products.filter((item) => item.category === categoryId)
-            setTimeout(() => {
-                resolve(filteredProducts)
-            }, 100)
+    
+    const getProducts = () => {
+        const db = getFirestore();
+        const querySnapshot = collection(db, 'products');
 
-        } else {
-            setTimeout(() => {
-                resolve(products)
-            }, 100)
-        }
-        
-    })
-
-    useEffect(() => {
-        getProducts.then((response) => {
-            setProductList(response)
-        })
+        if (categoryId) {
+            const filteredQuery = query(querySnapshot, where('category', '==', categoryId))
+            getDocs(filteredQuery)
+            .then((response) => {
+                const list = response.docs.map((doc) => {
+                    return {
+                        id: doc.id, ...doc.data()
+                    };
+                });
+                setProductList(list)
+            })
             .catch((error) => {
                 console.log(error)
+            })
+        } else {
+
+        getDocs(querySnapshot)
+        .then((response) => {
+            const list = response.docs.map((doc) => {
+                return {
+                    id: doc.id, ...doc.data()
+                };
             });
+            setProductList(list)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+    }
+    };
+
+    useEffect(() => {
+        getProducts()
     }, [categoryId]);
 
     return(

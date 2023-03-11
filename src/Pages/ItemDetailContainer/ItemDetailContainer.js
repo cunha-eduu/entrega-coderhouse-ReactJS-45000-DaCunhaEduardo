@@ -4,23 +4,27 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../data/products";
 import ItemDetail from "../../components/ItemDetail/ItemDetail";
+import { getFirestore, doc, getDoc } from 'firebase/firestore';
 
 const ItemDetailContainer = () => {
     const {id} = useParams()
     const [detailObject, setDetailObject] = useState({})
-    const getProducts = new Promise ((resolve, reject) =>{
-        setTimeout(() => {
-            const findProduct = products.find(item => item.id == id)
-            resolve(findProduct)
-        }, 1000)
+
+const getProduct = () => {
+    const db = getFirestore();
+    const querySnapshot = doc(db, 'products', id);
+
+    getDoc(querySnapshot)
+    .then((response) => {
+        setDetailObject({
+            id: response.id, ...response.data()
+        })
     })
+    .catch((error) => console.log(error))
+}
 
     useEffect(() => {
-        getProducts
-            .then( response => {
-                setDetailObject(response)
-            })
-            .catch((error) => {console.log(error)})
+        getProduct()
     }, [])
 
     return <div className='itemDetailContainer'> 
