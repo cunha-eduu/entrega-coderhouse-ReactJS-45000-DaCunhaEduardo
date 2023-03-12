@@ -65,9 +65,11 @@ table {
   --PADDING-MAIN-IMG: 0 auto;
   --PADDING-FIGCAPTION: 0.5rem;
   --MARGIN-MAIN-BOXES: auto auto;
+  --MARGIN-MAIN-BOXES-2: 30px auto;
   --POSITION-HEADER: static;
   --FONT-SIZE: 1.3rem;
   --BORDER-RADIUS-IMG: 1rem;
+  --BORDER-RADIUS-BOX: 2rem;
   --FULL-WIDTH: 100vw;
   --FULL-HEIGHT: 100vh;
 }

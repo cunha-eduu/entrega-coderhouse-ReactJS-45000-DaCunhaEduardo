@@ -16,7 +16,7 @@ function App() {
               <NavBar cartwidgedt={CartWidget}/>
               <Banner />
               <Routes>
-                  <Route path='/' element={<ItemListContainer greeting={'Bienvenido(a) a MedShop! El portal de Equipos Médicos más grande de La Argentina'} descuento={'La calidad de MedShop con un 30%OFF para estudiantes de Medicina'}/>}/>
+                  <Route path='/' element={<ItemListContainer greeting={'Bienvenido(a) a MedShop! El portal de Equipos Médicos más grande de La Argentina'} descuento={'La calidad de MedShop con un 10%OFF en todos los productos'}/>}/>
                   <Route path='/category/:categoryId' element={<ItemListContainer />}/>
                   <Route path='/item/:id' element={<ItemDetailContainer />}/>
                   <Route path='/cart' element={<Cart/>}/>

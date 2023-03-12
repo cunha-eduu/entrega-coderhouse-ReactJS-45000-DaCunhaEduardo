@@ -13,7 +13,7 @@ const ItemCount = ({count, setCount}) => {
     return (
         <div className='itemCount__counter'>
             <div className='itemCount__controllers'>
-                <button className='itemCount__controllers__button' onClick={onSubtract}>-</button>
+                <button className='itemCount__controllers__button' disabled={count === 0} onClick={onSubtract}>-</button>
                 <div>
                     <span>{count}</span>
                 </div>

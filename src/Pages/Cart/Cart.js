@@ -7,7 +7,7 @@ import swal from 'sweetalert';
 
 
 const Cart = () => {
-    const {cart, clear, removeItem} = useContext(CartContext)
+    const {cart, clear, removeItem, total, descuento} = useContext(CartContext)
     const navigate = useNavigate()
 
     const db = getFirestore();
@@ -30,7 +30,7 @@ const Cart = () => {
                     quantity: product.quantity
                 }
             }),
-            total: cart.reduce((accumulado, valorActual) => accumulado + valorActual.price * valorActual.quantity , 0)
+            total: total
         })
         .then((response) => {
             console.log(response.id)
@@ -47,7 +47,7 @@ const Cart = () => {
             }).catch((error) => console.log(error));
 
         updateStocks()
-        
+
         })
         .catch((error) => console.log(error))
 
@@ -73,20 +73,27 @@ const Cart = () => {
                 <h2>Mis Productos</h2>
                 <img className='cart__img ' src="/img/cart.png" alt="CART" /> 
             </div>
+            
+
             {cart.map((product) => (
                 <div className='cart__container__product' key={product.name}>
                     <img className='cart__container__product__img' src={`/img/${product.image}`} alt="producto" />
-                    <h2 className='cart__container__product__name'>{product.name}</h2>
+                    <h5 className='cart__container__product__name'>{product.name}</h5>
                     <h5 className='cart__container__product__quantity'>{product.quantity}</h5>
                     <button onClick={() => removeItem(product.id)} className='itemDetail__cancel__button'>X</button>
                 </div>
             ))}
             {cart.length > 0 && (
             <div>
+                <div className='cart__container__product__total'>
+                    <span className='cart__product__descuento'>Descuento: - USD {descuento}</span>
+                    <span className='cart__product__total'>Total: USD {total - descuento}</span>
+                </div>              
                 <button onClick={clear} className='itemDetail__clearCart__button'>Vaciar carrito</button>
                 <button className='itemDetail__secondary__button2' onClick={createOrder}>Finalizar compra</button>
             </div>)
             } 
+
             {cart.length === 0 && (
                 <div>
                     <h2>Carrito vacio</h2>

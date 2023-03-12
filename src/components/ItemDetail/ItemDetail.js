@@ -7,7 +7,7 @@ import { CartContext } from '../../context/CartContext';
 const ItemDetail = ({detail}) => {
     const navigate = useNavigate()
     const {addItem} = useContext(CartContext)
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(detail.stock === 0 ? 0 : 1)
     
     return(
     <div className="item__detail">
@@ -22,7 +22,7 @@ const ItemDetail = ({detail}) => {
         <button className="itemDetail__button"  onClick={() => addItem(detail, count)}>Agregar al carrito</button>
         <div className="itemDetail__secondary__button">
             <button className="itemDetail__secondary__button1"  onClick={() => navigate('/')}>Seguir comprando</button>
-            <button className="itemDetail__secondary__button2"  onClick={() => navigate('/cart')}>Finalizar Compra</button>
+            <button className="itemDetail__secondary__button2" onClick={() => navigate('/cart')}>Finalizar Compra</button>
         </div>
         
     </div>

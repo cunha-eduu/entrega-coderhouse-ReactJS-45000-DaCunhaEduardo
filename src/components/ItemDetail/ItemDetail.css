@@ -61,6 +61,10 @@
     cursor: pointer;
 }
 
+.itemDetail__button:hover{
+    background-color: rgba(0, 139, 139, 0.55);
+}
+
 .itemDetail__secondary__button1, .itemDetail__secondary__button2{
     font-size: 0.5em;
     border: none;
@@ -75,6 +79,14 @@
     background-color: grey;
 }
 
+.itemDetail__secondary__button1:hover{
+    background-color: rgba(128, 128, 128, 0.55);
+}
+
 .itemDetail__secondary__button2{
     background-color: rgb(5, 145, 5);
+}
+
+.itemDetail__secondary__button2:hover{
+    background-color: rgba(5, 145, 5, 0.55);
 }
