@@ -7,10 +7,12 @@
     text-align: center;
 }
 
-.cart__img {
-    width: 40px;
-    height: 40px;
-    margin-left: 15px;
+.cart__img, .cart__container__product__img {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin: 0 25px;
+    justify-content: space-between;
 }
 
 .cart__container__product{
@@ -51,22 +53,58 @@
     height: 45px;
     border-radius: 10px;
     cursor: pointer;
+    justify-content: right;
 }
 
 .itemDetail__clearCart__button{
     font-size: 2rem;
     border: none;
     justify-content: space-around;
-    height: 45px;
+    height: 55px;
     width: 30%;
     border-radius: 10px;
     cursor: pointer;
 }
 
-.itemDetail__secondary__button1{
+.itemDetail__secondary__button1,
+.itemDetail__secondary__button2{
     background-color: grey;
+    font-size: 2rem;
+    height: 55px;
+    width: 80%;
 }
 
 .itemDetail__secondary__button2{
     background-color: rgb(5, 145, 5);
+}
+
+/* Swal */
+
+.swal-title {
+    color: rgba(55, 43, 165, 0.85);
+    margin: 0px;
+    font-size: 25px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.21);
+    margin-bottom: 28px;
+}
+
+.swal-overlay {
+    background-color: rgba(55, 43, 165, 0.45);
+}
+
+.swal-text {
+    background-color: rgba(0, 70, 44,0.75);
+    padding: 17px;
+    border: 1px solid #F0E1A1;
+    display: block;
+    margin: 22px;
+    text-align: center;
+    color: white;
+}
+
+.swal-button {
+    padding: 10px 25px;
+    border-radius: 6px;
+    background-color:  rgba(55, 43, 165, 0.85);
+    font-size: 14px;
 }
