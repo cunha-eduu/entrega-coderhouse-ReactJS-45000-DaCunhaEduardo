@@ -5,7 +5,6 @@ import { Navigate, useNavigate } from 'react-router-dom';
 import { collection, addDoc, getFirestore, doc, updateDoc } from 'firebase/firestore';
 import swal from 'sweetalert';
 
-
 const Cart = () => {
     const {cart, clear, removeItem, total, descuento} = useContext(CartContext)
     const navigate = useNavigate()
@@ -100,6 +99,10 @@ const Cart = () => {
                     <button className='itemDetail__secondary__button1' onClick={() => navigate('/')}>Seguir comprando</button>
                 </div>
             )}
+
+            <div>
+                <img  className='logo' src="/logo.png" alt="LOGO" />
+            </div>
         </div>
     );
 };

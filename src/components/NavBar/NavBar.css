@@ -31,3 +31,17 @@
     padding: 0;
     
 }
+
+@media only screen and (max-width: 450px) {
+    .header,
+    .header__nav__ul__li {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .header__logo{
+        display: none;
+    }
+
+}

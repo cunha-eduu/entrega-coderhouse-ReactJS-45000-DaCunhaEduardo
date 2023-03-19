@@ -21,8 +21,8 @@ const ItemDetail = ({detail}) => {
         
         <button className="itemDetail__button"  onClick={() => addItem(detail, count)}>Agregar al carrito</button>
         <div className="itemDetail__secondary__button">
-            <button className="itemDetail__secondary__button1"  onClick={() => navigate('/')}>Seguir comprando</button>
-            <button className="itemDetail__secondary__button2" onClick={() => navigate('/cart')}>Finalizar Compra</button>
+            <button className="itemDetail__secondary__button__seguir"  onClick={() => navigate('/')}>Seguir comprando</button>
+            <button className="itemDetail__secondary__button__finalizar" onClick={() => navigate('/cart')}>Finalizar Compra</button>
         </div>
         
     </div>
