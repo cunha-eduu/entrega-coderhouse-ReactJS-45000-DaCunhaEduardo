@@ -6,7 +6,7 @@ const Banner = () => {
             <div>
                 <h1 className='banner__h1'>MedShop</h1>
             </div>
-            <img src={process.env.PUBLIC_URL+'/banner1.png'} alt="Banner MedShop" class="banner" />
+            <img src={process.env.PUBLIC_URL+'/banner1.png'} alt="Banner MedShop" className="banner" />
         </div>
     )
 }
